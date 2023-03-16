@@ -17,7 +17,7 @@ uploaded_file = st.file_uploader('Upload an image', type=['jpg', 'jpeg', 'png'])
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
     image = np.array(image)
-    st.image(image, caption='Uploaded image', use_column_width=True)
+#     st.image(image, caption='Uploaded image', use_column_width=True)
 
     # Predict the segmentation mask
     segmentation_map = segmentation_pipeline.predict(image)
